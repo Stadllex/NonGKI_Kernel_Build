@@ -551,7 +551,7 @@ jobs:
         if: env.SUSFS_ENABLE == 'true' && env.SUSFS_FIXED == 'true'
         run: |
           cd $GITHUB_WORKSPACE/device_kernel/
-          cp NonGKI_Kernel_Patches/[patch_folder]/[patch_file].patch ./
+          cp NonGKI_Kernel_Patches/patch_folder/50_add_susfs_in_kernel-4.19.patch.patch ./
 
           patch -p1 < [patch_file].patch || true
 
@@ -564,9 +564,9 @@ jobs:
           patch -p1 < susfs_upgrade_to_157.patch || true
 
           # Extra SUSFS Patch
-          # cp NonGKI_Kernel_Patches/[patch_folder]/[patch_file].patch ./
+          # cp NonGKI_Kernel_Patches/patch_folder/50_add_susfs_in_kernel-4.19.patch.patch ./
 
-          # patch -p1 < [patch_file].patch || true
+          # patch -p1 < 50_add_susfs_in_kernel-4.19.patch.patch || true
 
       - name: Setup ccache
         uses: hendrikmuhs/ccache-action@v1.2
