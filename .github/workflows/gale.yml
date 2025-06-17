@@ -1,4 +1,4 @@
-name: Build Kernel OPPO K9 Pro (ColorOS 13) with KSU and SUSFS
+name: Build Kernel Poco c65 (ColorOS 13) with KSU and SUSFS
 on:
   workflow_call:
   workflow_dispatch:
